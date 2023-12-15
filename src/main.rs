@@ -5,27 +5,37 @@ use std::io;
 fn main() {
     println!("Guess the number!");
 
+    // variabile statica (costante)
     let secret_number = rand::thread_rng().gen_range(1..101);
 
+    // il punto esclamativo indica che è una macro (la macro println! è simile a quella di C)
     println!("The secret number is: {}", secret_number);
-    println!("Please input your guess.");
 
-    let mut guess = String::new();
+    loop {
+        // variabile mutabile
+        let mut guess = String::new();
 
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+        println!("Please input your guess.");
 
-    let guess: u32 = guess
-        .trim() // remove whitespace
-        .parse() // parse string to number
-        .expect("Please type a number!"); // handle error
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
 
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small!"),
-        Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
+        let guess: u32 = guess
+            .trim() // remove whitespace
+            .parse() // parse string to number
+            .expect("Please type a number!"); // handle error
+
+        println!("You guessed: {}", guess);
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                // break the loop
+                println!("You win!");
+                break;
+            }
+        }
     }
-
-    println!("You guessed: {}", guess);
 }
