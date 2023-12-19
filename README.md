@@ -20,7 +20,7 @@ cargo new hello_world
 > Use --bin to create a binary crate (default)
 
 ## Run
-  
+
 ```bash
 cargo run
 ```
@@ -48,3 +48,8 @@ cargo clippy
 ```bash
 cargo test
 ```
+
+## Credits
+
+- [(Youtube) Introduzione a Rust - with Claudio Vesco](https://www.youtube.com/live/Q4wLZs7pfBU?si=C6Ipb1nvI1D1FdRd)
+- [(Youtube) Corso Rust 2023 - Introduzione a Rust](https://youtu.be/ishPqDChRew?si=Eglo4ygbnN8QWFBb)

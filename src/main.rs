@@ -2,7 +2,7 @@ use rand::Rng;
 use std::cmp::Ordering; // Ordering is an enum
 use std::io;
 
-fn main() {
+fn game() {
     println!("Guess the number!");
 
     // variabile statica (costante)
@@ -37,5 +37,28 @@ fn main() {
                 break;
             }
         }
+    }
+}
+
+fn main() {
+    let mut config = String::new();
+
+    println!("Hello, world!");
+    println!("A che gioco vuoi giocare?");
+    println!("1. Guessing game");
+
+    io::stdin()
+        .read_line(&mut config)
+        .expect("Failed to read line");
+
+    let config: u32 = config
+        .trim() // remove whitespace
+        .parse() // parse string to number
+        .expect("Please type a number!"); // handle error
+
+    if config == 1 {
+        game();
+    } else {
+        println!("I don't know this game!");
     }
 }
