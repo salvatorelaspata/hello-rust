@@ -1,6 +1,7 @@
 # Hello world in Rust
 
-[DOCS](https://doc.rust-lang.org/cargo/index.html)
+[Rust DOCS](https://doc.rust-lang.org/cargo/index.html)
+[Personal DOCS](/docs/)
 
 ## Install Rust
 
@@ -52,4 +53,4 @@ cargo test
 ## Credits
 
 - [(Youtube) Introduzione a Rust - with Claudio Vesco](https://www.youtube.com/live/Q4wLZs7pfBU?si=C6Ipb1nvI1D1FdRd)
-- [(Youtube) Corso Rust 2023 - Introduzione a Rust](https://youtu.be/ishPqDChRew?si=Eglo4ygbnN8QWFBb)
+- [(Youtube) Corso Rust 2023 - Politecnico di Milato (Playlist)](httpshttps://www.youtube.com/playlist?list=PLA27EZBY5veNjzODR42c5DQNkaSYR5Mgf)
